@@ -1,0 +1,1551 @@
+body{
+    min-width: 1010px;
+    -webkit-font-smoothing: antialiased;
+     font-family: 'Heebo', sans-serif;
+   
+}
+header{
+    background-image:url(../finalproject/image/TurboTitle.png);
+    display: block;
+    height: 160px;
+    background-size: cover;
+
+}
+/*registiration*/
+.registiration{
+    background-color: #292929;
+    position: relative;
+   
+    .phonecontact{
+        color: #dadada;
+        font-family: 'Krub', sans-serif;
+        font-size: 15px;
+        line-height: 40px;
+        float: right;
+        margin-right: 16%;
+        
+    }
+    a{
+        color: white;
+        text-decoration: none;
+    
+    .turboAzborder{
+        width: 255px;
+        background-color: #c30c0c;
+        border-top: 1px solid #c30c0c;
+        height: 96px;
+        margin-top: 15px;
+       position: absolute;
+       text-align: center;
+       cursor: pointer;
+       box-shadow: 2px -4px 4px 0 rgba(0,0,0,0.5);
+       
+       p{
+           
+        font-size: 38px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 900;
+        padding-top: 18px;
+       }
+       span{
+        font-size: 13px;
+        font-family: 'Roboto', sans-serif;
+        letter-spacing: 1px;
+        
+    }
+    
+      }
+    }
+    .language{
+        a{
+        color: #fff;
+        font-size: 15px;
+        line-height: 40px;
+        text-decoration: none;
+        font-family: 'Krub', sans-serif;
+        float: right;
+      
+        
+        }
+       
+    }
+    .options{
+        a{
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 8px;
+            color: #fff;
+            font-size: 15px;
+            line-height: 40px;
+            text-decoration: none;
+            font-family: 'Krub', sans-serif;
+            float: right;
+            
+            .heartIcon{
+                padding-left: 25px;
+                font-size: 18px;
+                padding-right: 2px; 
+            }
+            }
+
+    }
+    .register{
+        a{
+    margin-left: 8px;
+    color: #fff;
+    font-size: 15px;
+    line-height: 40px;
+    text-decoration: none;
+    font-family: 'Krub', sans-serif;
+    float: right;
+    padding-left: 15px;
+    margin-right: 15px;
+
+    .userIcon{
+        padding-right: 8px;
+        font-size: 16px;
+        padding-left: 15px;
+    }
+        }
+        
+    }
+}
+/*domains*/
+.domains{
+    background-color: #292929;
+    .domainsbackground{
+          background-color: #424242;
+          display: flex;
+          border-top: 1px solid #616161;
+          width: 1010px;
+          cursor: pointer;
+    
+    }
+    .domainsborder{ 
+        border-right: 1px solid #616161;
+          width: 252px;
+          height: 70px;
+         transition: 0.3s;
+
+
+          p{
+            a{
+                color: white;
+                text-decoration: none;
+            }
+         font-size: 35px;
+         font-family: 'Roboto', sans-serif;
+         font-weight: 900;
+         padding-top: 18px;
+         text-align: center;
+         letter-spacing: 2px;
+        }
+          
+      } 
+    }
+    .binahover:hover{
+        background: #b88668;
+
+    }
+    .taphover:hover{
+        background: #ff6617;
+
+    }
+    .bosshover:hover{
+        background: #f6a72a;
+    }
+    
+/*Navbar*/
+.navbar{
+    height: 50px;
+     background-color: #c30c0c;
+    
+    nav{
+        ul {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            a{
+                text-decoration: none;
+                color: white;
+            
+            }
+            li{
+                float: left;
+                width: 123px;
+                height:50px;
+                line-height: 50px;
+                text-align: center;
+                font-size: 14px;   
+                font-family: 'Merriweather Sans', sans-serif;
+                font-weight: 600;
+                cursor: pointer;
+                z-index: 999;
+               
+            }
+        
+        }
+        ul li:hover{
+             background-color: #e71a21 ; 
+        }
+        .navStors{
+            width: 188px;   
+        }
+        .navAccessories{
+            width: 260px; 
+            position: absolute;
+            margin-left: 42%;
+            ul{
+                display: none;
+            }     
+            &:hover
+            ul{
+                -webkit-box-shadow: 0 2px 6px 0 rgba(97,97,97,0.5);
+                box-shadow: 0 2px 6px 0 rgba(97,97,97,0.5); 
+                 height: 399px; 
+                 display: block;
+                 a{
+                    color: #000; 
+                }        
+             li{
+                    background-color: white;
+                    width: 260px;
+                    display: none;
+                    &:hover{
+                        background: #F2F4F8; 
+                    }
+                }
+            }
+        }
+        ul .navAccessories:hover ul li{
+            display:block;
+            height: 40px;
+            font-family: 'Quicksand', sans-serif;
+            float: left;
+         
+            
+         } 
+         
+    }
+    .elanYerlesdir{
+        
+        height: 50px;
+        width: 228px;
+        background-color: #7ed321;
+        float: right;
+        text-align: center;
+        line-height: 3;
+        font-size: 16px;
+        font-family: 'Merriweather Sans', sans-serif;
+        font-weight: 900;
+        color: white;
+        text-decoration: none;
+            .plasIcon{
+                font-size: 26px;
+                margin-top: 12px;
+                float: left;
+                padding-left: 37px;
+            }
+            span{
+                float: left;
+                padding-left: 10px;
+            }
+    
+       
+    
+    }
+   
+    
+}
+.elanYerlesdir:hover{
+    background-color: #85BF1E;
+}
+/*simple form search*/
+
+.simple-form-search{
+ height: 119px;
+ background-color: #D8D8D8;
+ display: flex;
+ box-shadow: 0 0 11px 0 rgba(111,110,110,0.5);
+ 
+.wideSearch-markas{
+        width: 190px;
+        height: 115px;
+        select{
+            padding-left: 9px;
+            padding-right: 31px;
+            height: 32px;
+            border: 1px solid rgb(255, 255, 255);
+            margin-left: 23px;
+            margin-top: 19px;
+            background-color: white;
+            font-size: 16px;
+            color: grey;
+            font-family: 'Source Sans Pro', sans-serif;
+            letter-spacing: 0.8px;
+            background-image:url(https://turbo.azstatic.com/assets/application/select_triangle_gray-38118e1e5792c555029e3d5106c132600b954bff0511410d6e831af34f581767.svg);
+            background-repeat: no-repeat;
+            background-position: center right 10px;
+            -webkit-appearance: none;
+            outline: none;
+
+        }
+        .markas{
+            margin-top: 15px;
+        }
+}
+
+.wideSearch-priceandYear{
+    width: 340px;
+    height: 115px;
+    margin-top: -3px;
+    .optionalPrice{
+        margin-top: 22px;
+    }
+    label{
+    padding: 5px;
+    border: 1px solid white;
+    margin-left: 10px;
+   border-top-left-radius: 5px;
+   border-bottom-left-radius: 5px;
+    background-color: white;
+    font-size: 16px;
+    color: grey;
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: 0.8px;
+    padding-right: 8px;
+    padding-left: 8px;
+    }
+    .currency{
+        height: 32px;
+        border: 1px solid white;
+        margin-left: -2px;
+        background-image:url(https://turbo.azstatic.com/assets/application/select_triangle_gray-38118e1e5792c555029e3d5106c132600b954bff0511410d6e831af34f581767.svg);
+        background-repeat: no-repeat;
+        background-position: center right 10px;
+        background-color: white;
+        font-size: 16px;
+        color: grey;
+        font-family: 'Source Sans Pro', sans-serif;
+        letter-spacing: 0.8px;
+        border-radius:0px;
+        -webkit-appearance: none;
+        padding-right: 24px;
+        padding-left: 10px;
+        outline: none;
+    }
+    .optionalMin{
+        width: 84px;
+        height: 28px;
+        border: 1px solid rgb(255, 255, 255);
+        margin-left: -2px;
+        background-color: white;
+        font-size: 16px;
+        color: grey;
+        font-family: 'Source Sans Pro', sans-serif;
+        letter-spacing: 0.8px;
+        outline: none;
+
+    } 
+    .optionalMax{
+        width: 84px;
+        height: 28px;
+        border: 1px solid rgb(255, 255, 255);
+        margin-left: -2px;
+        background-color: white;
+        font-size: 16px;
+        color: grey;
+        font-family: 'Source Sans Pro', sans-serif;
+        letter-spacing: 0.8px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        outline: none;
+    }
+
+.enterYear{
+margin-top: 15px;
+
+}
+    .year{
+        padding-left: 9px;
+        padding-right: 25px;
+    }
+    .yearMin{
+        width: 100px;
+    }
+    .yearMax{
+        padding-right: 11px
+    }
+
+
+}
+.wideSearch-barterCredit{
+    width: 260px;
+    height: 115px;
+    
+    .checkBox{
+        position: relative;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: flex;
+    cursor: pointer;
+    width: 89px;
+    height: 32px;
+    margin-top: 19px;
+    border: 1px solid white;
+    margin-left: 10px;
+    background-color: white;
+    color: grey;
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: 0.8px;
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-top: 7px;
+    label{
+        cursor: pointer;
+        
+    }
+    
+    }
+    .barter{
+        margin-top: 15px;
+    }
+
+.allCity{
+    position: absolute;
+    margin-left: 92px;
+    padding-left: 9px;
+    padding-right: 31px;
+    height: 32px;
+    border: 1px solid white;
+    margin-top: -8px;
+    background-color: white;
+    font-size: 16px;
+    color: grey;
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: 0.8px;
+    background-image:url(https://turbo.azstatic.com/assets/application/select_triangle_gray-38118e1e5792c555029e3d5106c132600b954bff0511410d6e831af34f581767.svg);
+    background-repeat: no-repeat;
+    background-position: center right 10px;
+    -webkit-appearance: none;
+    outline: none;
+}
+
+
+.dailyAds{
+    position: absolute;
+    margin-top: -8px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: flex;
+    cursor: pointer;
+    width: 155px;
+    height: 32px;
+    border: 1px solid white;
+    margin-left:92px;
+    background-color: white;
+    color:#C91F32;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding-left: 8px;
+    padding-top: 7px;
+    
+}
+}
+.wideSearch{
+    .search{
+        width: 178px;
+        height: 33px;
+        border-radius: 4px;
+        background-color: #c30c0c;
+        color: white;
+        text-align: center;
+        font-size: 16px;
+        font-family: 'Source Sans Pro', sans-serif;
+        margin-left: 22px;
+        margin-top: 18px;
+        cursor: pointer;
+        outline: none;
+
+    }
+    .moreSearch{
+        width: 178px;
+    position: absolute;
+    height: 25px;
+    border-radius: 4px;
+    background-color:#797979;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-top: 15px;
+    cursor: pointer;
+    margin-left: 23px;
+    padding-top: 7px;
+    }
+}
+}
+/*vip elanlar*/
+.vipAll{
+    padding: 0px 20px;
+    height: 60px;
+    border-bottom: 1px solid #efefef;
+    .vipElanlar{
+        font-family: 'Heebo', sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        text-transform: uppercase;
+        display: inline-block;
+        padding-top: 25px;
+        -webkit-font-smoothing: antialiased;
+    }
+    a{
+        font-size: 16px;
+        color: #0f68cf;
+        display: inline-block;
+        text-decoration: underline;
+        margin-left: 25px;
+        font-family: 'Heebo', sans-serif;
+        font-weight: 500;
+    }
+    .logoText{
+        float: right;
+        color: #F00;
+        font-size: 14px;
+        line-height: 58px;
+        font-family: 'Heebo', sans-serif;
+    }
+    img{
+        margin-right: -31px;
+        float: right;
+        width: 100px;
+        padding-top: 19px;
+        display: inline;
+    }
+}
+/*Produscts*/
+.products{
+    background-color: #FAFAFA;
+    padding-left: 20px;
+    padding-top: 29px;
+
+    
+}
+.productBorder{
+    :hover{
+        background-color: #E5F0FD;
+    }
+    display: inline-block;
+    box-shadow: 0 2px 4px 0 rgba(218, 218, 218, 0.54);
+    height: 252px;
+    padding: 0px;
+    margin-right: 15px;
+    margin-bottom: 17px;
+    border-radius: 2px;
+    width: 228px;
+    
+}
+.onliCar{
+    cursor: pointer;
+    img{
+    top: 50%;
+    left: 50%;
+    max-width: 100%;
+    max-height: 100%;
+    }
+
+    .likeIcon{
+        position: absolute;
+        color: white;
+        opacity: 0.8;
+        font-size: 23px;
+        padding-left: 10px;
+        padding-top: 8px;
+        cursor: pointer;
+       background: transparent;
+    }
+    .productPrice{
+        background-color: #C91F32;
+        color: white;
+        position: absolute;
+        margin-top: -34px;
+        font-family: 'Heebo', sans-serif;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 31px;
+        padding: 0 10px;
+        z-index: 800;
+         :hover{
+         background-color:#C91F32;
+         }
+       
+    }
+    .productsInfo {
+        position: relative;
+        padding: 10px 10px;
+        .carName{
+            font-size: 18px;
+            font-family: 'Heebo', sans-serif;
+            font-weight: 600;
+            -webkit-font-smoothing: antialiased;
+            word-spacing: 1px;
+            color: black;
+
+        }
+        .carInfo p{ 
+                display: inline-block;
+                position: relative;
+                font-family: 'Sarabun', sans-serif;
+                font-size: 14px;
+                font-weight: 500;
+                color: #4a4a4a;
+                line-height: 2;
+                span {
+                    width: 3px;
+                    height: 3px;
+                    background-color: #000;
+                    margin-left: 1px;
+                    margin-right: 1px;
+                    margin-bottom: 4px;
+                    display: inline-block;
+                    content: '';
+                    border-radius: 50%;
+                }
+            }
+            .enterDay{
+                font-size: 13px;
+                 color: #969696;
+                 font-family: 'Sarabun', sans-serif;
+                 i{
+                    float: right;
+                    color: orangered;
+                    font-size: 15px;
+                 }
+
+            }
+    }
+
+}
+/*Son elanlar*/
+.vipAll{
+    .allShow{
+        float: right;
+        padding-top: 23px;
+    }
+}
+/*Avtosalonlar*/
+.shops-header-Container{
+    background-color: #FAFAFA;
+    padding: 20px;
+    .shops-container{
+        background-color: #E5F0FD;
+        padding: 25px 0px;
+    }
+    .shopsHeader {
+        font-family: 'Heebo', sans-serif;
+        line-height: 1.2;
+        font-size: 17px;
+        padding: 0px 20px 20px;
+        p{
+        display: inline-block;
+    color: #2e2e2e;
+    font-weight: bold;
+        }
+        a{
+            float: right;
+            color: #0f68cf;
+            font-weight: 500;
+            
+        }
+        :hover{
+            text-decoration: none;
+        }
+    }
+    .shops{
+        display: flex;
+        -webkit-justify-content: center;
+   
+    .salonlar-Logo-Container{
+        margin: 0 8px;
+        width: 173px;
+        background-color: #549EF8;
+        border-radius: 2px;
+        :hover{
+            background-color: #4482CC;
+        }
+        
+    
+    .salonlarLogo{
+        cursor: pointer;
+       
+       
+         img{
+         top: 50%;
+         left: 50%;
+         max-width: 100%;
+         max-height: 100%;
+        }
+           
+        }
+        .salonlarName {
+            position: relative;
+            padding: 7px 0px;
+            
+            p{
+                font-size: 17px;
+                font-family: 'Heebo', sans-serif;
+                font-weight: 600;
+                -webkit-font-smoothing: antialiased;
+                color: white;
+                text-align: center;
+    
+            }
+            
+               
+        }
+    }
+  }
+}
+/*Sirketler*/
+.shops-header-Container{
+.companies{
+    background-color: #eef0f7;
+}
+.shops{
+.companiesLogo{
+    border-radius: 2px;
+    background-color: #9499a4;
+    :hover{
+        background-color: #666C7A;
+    }
+    .salonlarLogo{
+      .companiesName{
+          p{
+              text-align: inherit;
+              padding-left: 8px;
+          }
+          span{
+            color: white;
+            font-family: 'Heebo', sans-serif;
+            font-size: 14px;
+            padding-left: 8px;
+          }
+      }  
+    }
+}
+
+}
+
+}
+/*Butun markalar*/
+.markalarHeader{
+    p{
+        font-family: 'Heebo', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    padding: 20px;
+    border-bottom: 1px solid #efefef;
+
+    }
+}
+.allMarkasSection{
+    background-color: #FAFAFA;
+    
+ .allMarkasContainer{
+    width: 25%;
+    float: left;
+    font-family: 'Heebo', sans-serif;
+    background-color: #FAFAFA;
+    padding: 20px 0px;
+.allMarkas{
+    line-height: 23px;
+    p{
+        display: inline-block;
+        width: 60px;
+        
+        text-align: right;
+        color: #999;
+        font-size: 15px;
+    }
+    span{
+        width: 3px;
+        height: 3px;
+        background-color:#999;
+        display: inline-block;
+        content: '';
+        border-radius: 50%;
+        margin: 4px 7px;
+    }
+    a{   
+    display: inline-block;
+    color: #186d9f;
+    text-decoration: none;
+    font-size: 15px;
+    vertical-align: top;
+    max-width: 160px;
+    margin-bottom: 5px;
+  
+    }
+
+   }
+    
+
+ } 
+}
+/*Footer*/
+.footer{
+   .contact{
+    height: 150px;
+        background-color:#444;
+        border-top: 4px solid red;
+        padding: 20px;
+
+        a {
+            color: white;
+            font-size: 14px;
+            font-family: 'Heebo', sans-serif;
+            display: flex;
+            -webkit-font-smoothing: antialiased;
+
+        }
+        :hover{
+            text-decoration: none;
+        }
+        .qaunQaydalar {
+            display: flex;
+            padding: 20px 0px;
+            .qanun{
+                padding-left: 30px;
+            }
+        }
+        p{
+            font-family: 'Heebo', sans-serif;
+            color: #ccc;
+            font-size: 14px;
+            span{
+                color: white;
+                font-size: 17px;
+                padding-right: 10px;
+            }
+        }
+        .phone-and-email{
+            display: flex;
+            padding: 20px 0px;
+            p{
+                margin-right: 10px;
+            }
+            i{
+                padding-right: 10px;
+                color:White;
+                font-size: 15px;
+            }
+            a{
+                color: #ccc;
+            }
+            :hover{
+                text-decoration: none;
+            }
+        }
+        .col-7{
+            margin-left: 45px;
+            p{
+                font-size: 13px;
+                color: #979797;
+            }
+            .adminstrasiyaQanunu{
+                padding-bottom: 15px;
+            }
+            a{
+                margin-top: 15px;
+               
+            }
+            :hover{
+                text-decoration: none;
+            }
+        }
+        .col-2{
+            a{
+                margin-left: 40px;
+            }
+        }
+}
+}
+
+/*Turbo-register */
+.mainRegister{
+    display: flex;
+    height: 630px;
+.emailShifre{
+    font-size: 15px;
+    color: #333;
+    width: 175px;
+    
+    font-family: 'Heebo', sans-serif;
+    padding: 0px 20px;
+    p{
+        margin: 29px 0px;
+    }
+    .pasword{
+        margin: 36px 0px;
+    }
+}
+.input-and-button{
+    position: relative;
+    
+    
+    input{
+        display: block;
+        width: 260px;
+        height: 28px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin: 20px 0px;
+        font-size: 15px;
+        outline: none;
+    }
+    button{
+        font-size: 17px;
+        padding: 8px 9px;
+    border-radius: 6px;
+    background-color: #82101B;
+    color: white;
+    border: 1px solid;
+    margin-top: -7px;
+    font-family: 'Heebo', sans-serif;
+   cursor: pointer;
+    }
+    button:hover{
+        background-color: #c71b25;
+    }
+    a{  
+          color: #186d9f;
+        font-size: 15px;
+        float: right;
+    }
+
+   
+}
+}
+
+/*Unudulmus-sifre*/
+.user-report-text{
+    font-size: 15px;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 100;
+    padding-top: 25px;
+    padding-left: 20px;
+}
+
+/*Avtosalonlar" navbarin icerisinde*/
+.container-stors{
+    display: inline-block;
+.avtostors{
+    text-decoration: none;
+    color: #3b3b3b;
+}
+.stors{
+    display: flex;
+    margin: 10px 0px;
+    width: 465px;
+    margin-left: 25px;
+    height: 145px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 3px 2px rgba(201,199,199,0.66);
+    box-shadow: 0 0 3px 2px rgba(201,199,199,0.66); 
+    .stors-logo{
+        background-image: url(https://turbo.azstatic.com/uploads/f352x352/2017%2F12%2F05%2F15%2F31%2F20%2F107%2FLogo.png);
+        background-size: cover;
+        width: 147px;
+        display: inline-block;
+        border-radius: 10px 0px 0px 10px;
+        span{
+            border-radius: 2px;
+            letter-spacing: 1px;
+            background-color: #3D8CEA;
+            font-family: 'Heebo', sans-serif;
+            font-weight: 600;
+            color: white;
+            font-size: 9px;
+            padding: 4px;
+            float: right;
+            margin: 5px;
+        }
+    } 
+    .stors-contents{
+       width: 317px;
+       border-radius: 0px 10px 10px 0px;
+       font-family: 'Heebo', sans-serif;
+       padding-left: 13px;
+     .stors-contents-title{
+       font-size: 19px;
+       font-weight: 600;
+       padding-top: 12px;
+     }
+     .stors-contents-description{
+        padding-top: 5px;
+        font-size: 14px;
+        line-height: 1.2;
+     }
+     .stors-contents-contact{
+        font-size: 14px;
+        color: #9b9b9b;
+        padding: 14px 0px;
+        i{
+            color: #8BD1F4;
+            margin-right: 6px;
+        }  
+     }
+     span{
+        color: #22a7f0;
+        font-size: 13px;
+     }
+    }
+}
+.stors:hover{
+    box-shadow: 0 0 2px 4px #c9171d;
+}
+.stors:hover .stors-logo{
+    border-right: 2px solid red;
+
+}
+}
+
+/*"Magazalar ve shirketler" navbarin icerisinde*/
+
+.container-companies{
+    display: inline-block;
+.compani-stor{
+    text-decoration: none;
+    color: #3b3b3b;
+}
+.compani{
+    display: flex;
+    margin: 10px 0px;
+    width: 468px;
+    margin-left: 25px;
+    height: 170px;
+    -webkit-box-shadow: 0 0 3px 2px rgba(201,199,199,0.66);
+    box-shadow: 0 0 3px 2px rgba(201,199,199,0.66); 
+    .compani-logo{
+        background-image: url(https://turbo.azstatic.com/uploads/f352x352/2018%2F09%2F24%2F10%2F00%2F30%2Fc2b22867-5538-4992-b351-adf480e13b51%2FMitsubishilogo.jpg);
+        background-size: cover;
+        width: 171px;
+        display: inline-block;
+        border-right: 1px solid rgba(201,199,199,0.66);
+       
+    } 
+    .compani-contents{
+      
+       border-radius: 0px 10px 10px 0px;
+       font-family: 'Heebo', sans-serif;
+       padding-left: 13px;
+     .compani-contents-Name{
+       font-size: 17px;
+       font-weight: 500;
+       padding-top: 18px;
+       margin-bottom: 12px;
+     }
+     .compani-contents-location{
+        padding-top: 13px;
+        font-size: 14px;
+        line-height: 1.2;
+        color: #747474;
+        i{
+            color: #666C7A;
+            margin-right: 7px;
+            font-size: 18px;
+        }  
+     }
+     .compani-contents-contact{
+        font-size: 14px;
+        color: #747474;
+        padding: 16px 0px;
+        i{
+            color: #666C7A;
+            margin-right: 6px;
+            font-size: 19px;
+        }  
+     }
+     span{
+            color: #2eb265;
+            font-size: 14px;
+     }
+    }
+}
+
+}
+
+/*Elan yerlesdirmek*/
+.first-number{
+    height: 177px;
+
+}
+.admin-warning{
+    font-family: 'Heebo', sans-serif;
+    p{
+        line-height: 3;
+        font-size: 21px;
+        font-weight: 600;
+        -webkit-font-smoothing: inherit;
+        padding-left: 20px;
+    
+    }
+    ul{
+      
+        margin-left: 20px;
+        list-style-type: disc;
+        line-height: 1.4;
+        font-size: 14px;
+        font-weight: 100;
+    }
+}
+.car-type-add{
+    font-size: 14px;
+    font-weight: 100;
+    color: #333;
+    margin: 15px 0px;
+    display: flex;
+
+    .left-side{
+        padding-left: 20px;
+    }
+    .right-side{
+        padding-left: 50px;
+    }
+    .car-type-choose{
+        margin: 19px 0px;
+       
+        label{
+            margin: 9px 0px;
+           
+            position: absolute;
+            ::after{
+                content: '*';
+                color: #c51e2b;
+            }
+        }
+        .sellect-choose{
+            margin-left: 177px;
+        select{
+            border: 1px solid #ccc;
+            padding-left: 9px;
+            height: 32px;
+            width: 277px;
+            background-color: white;
+            font-size: 14px;
+            color:#333;
+           // background-image:url(https://turbo.azstatic.com/assets/application/select_triangle_gray-38118e1e5792c555029e3d5106c132600b954bff0511410d6e831af34f581767.svg);
+            background-repeat: no-repeat;
+            background-position: center right 10px;
+            -webkit-appearance: none;
+            outline: none;
+        }
+        input{
+            border: 1px solid #ccc;
+            padding-left: 9px;
+            height: 29px;
+            width: 265px;
+            background-color: white;
+            font-size: 14px;
+            color: #333;
+            border-radius: 5px;
+            outline: none;
+            
+        }
+        .price{
+            width: 110px;
+        }
+        .valyuta-azn{
+            margin-left: 5px;
+            position: absolute;
+
+        }
+        .valyuta-usd{
+            position: absolute;
+            margin-left: 55px;
+        }
+          .valyuta-eur{
+            position: absolute;
+            margin-left:105px;
+          } 
+            .valyuta{
+               width: 19px;
+            }
+            label{
+                margin: 12px 23px;
+            }
+        
+       
+    }
+    }
+}
+.credit-barter-text-section{
+    display: flex;
+    .more-information{
+        p{
+            margin-top: 65px;
+            font-size: 14px;
+            font-weight: 100;
+            color: #333;
+            margin-left: 20px;
+            margin-right: 85px;
+        }
+    }
+    .credit-addMoreInformation{
+        display: grid;
+        width: 790px;
+        font-size: 15px;
+        font-weight: normal;
+        color: #333;
+        gap: 5px;
+       
+        input{
+            width: 14px;
+            height: 14px;
+        }
+        .credit{
+            position: absolute;
+           margin: 4px 22px;
+        }
+        .barter{
+            position: absolute;
+            margin: 29px 22px;
+        }
+        textarea{
+            outline: none;
+            max-width: 775px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            margin-top: 15px;
+        }
+        p{
+            color: #888;
+            font-size: 14px;
+        }
+    }
+}
+.Vehicle-supply{
+font-size: 22px;
+font-weight: 500;
+padding-left: 20px;
+display: flow-root;
+
+p{
+    margin: 10px 0px;
+}
+.chekboxs{
+    .col-3{
+        width: calc(100%/12*3 - 20px);
+        display: grid;
+        gap: 7px;
+    
+    }
+    input{
+        width: 15px;
+        height: 15px;
+    }
+    label{
+        font-size: 15px;
+        font-weight: 100;
+        color: #333;
+    }
+}
+}
+.add-image{
+    p{
+        padding: 0px 20px;
+        margin: 20px 0px;
+        font-size: 22px;
+        font-weight: 500;
+    }
+    .col-12{
+        border: 1px solid #c2cde5;
+        margin-bottom: 20px;
+        height: 160px;
+        .image-text{
+            max-width: 320px;
+            margin: 20px 0px;
+            ul{
+                font-size: 14px;
+              line-height: 1.4;
+                color: #9b9b9b;
+                margin-left: 20px;
+                li{
+                    margin-bottom: 10px;
+                }
+                }
+            }
+        }
+    }
+    .col-6{
+        ul{
+            list-style: none;
+            font-size: 15px;
+            color: #9b9b9b;
+            line-height: 1.5;
+            li{
+                margin-bottom: 17px;
+                list-style: disc;
+                margin-left: 20px;
+            }
+        
+    
+        
+    }
+    
+}
+.enter-contact-number{
+    p{
+        display: inline-grid;
+        padding: 0px 20px;
+        margin: 20px 0px;
+        font-size: 22px;
+        font-weight: 500;
+        gap: 20px
+    }
+    span{
+        font-size: 14px;
+        font-weight: normal;
+        color: #9b9b9b;
+    }
+    .about-yourself{
+        margin: 12px 0px;
+       
+        label{
+            font-size: 14px;
+           
+            color: #333;
+            margin: 9px 0px;
+           
+            position: absolute;
+            ::after{
+                content: '*';
+                color: #c51e2b;
+            }
+        }
+        .Name-choose{
+            margin-left: 177px;
+           
+            select{
+                border: 1px solid #ccc;
+                padding-left: 9px;
+                height: 32px;
+                width: 277px;
+                background-color: white;
+                font-size: 14px;
+                color:#333;
+                background-image:url(https://turbo.azstatic.com/assets/application/select_triangle_gray-38118e1e5792c555029e3d5106c132600b954bff0511410d6e831af34f581767.svg);
+                background-repeat: no-repeat;
+                background-position: center right 10px;
+                -webkit-appearance: none;
+                outline: none;
+            }
+            
+      
+        input{
+            border: 1px solid #ccc;
+            padding-left: 9px;
+            height: 29px;
+            width: 265px;
+            background-color: white;
+            font-size: 14px;
+            color: #333;
+            border-radius: 5px;
+            outline: none;
+            
+        }
+       
+
+}
+.email-secrutiy{
+    margin-left: 18%;
+}
+    }
+}
+.thick-line{
+width: 100%;
+height: 9px;
+background-color: #eaeaea;
+
+}
+.advertisement-type{
+    p{
+       font-weight: 500;
+        font-size: 19px;
+        margin: 25px;
+
+    }
+    .vip-and-sinple{
+       .col-6{
+        margin: 25px 0px;
+       }
+    .vip-elan-et{
+        border-radius: 8px;
+        width: 435px;
+        height: 299px;
+        background-repeat: no-repeat;
+        background-color: #6d2a98;
+        -webkit-box-shadow: 0 5px 15px 0 #aa4bf2;
+        box-shadow: 0 5px 15px 0 #aa4bf2;
+        background-image: url(image/reddiamond.png);
+        background-size: 250px 240px;
+        background-position-y: 43px;
+        background-position-x: 270px;
+
+        .number-of-visits-more{
+            width: 180px;
+            height: 90px;
+            margin-left: 22px;
+            background-color: #fac732;
+            .col-6 span.ten{
+                font-size: 40px;
+                font-weight: bold;
+                color: #6d2a98;
+                position: absolute;
+                margin: -1px 23px;
+            }
+            .col-6 span.times{
+                font-size: 19px;
+            font-weight: 500;
+            color: #6d2a98;
+            position: absolute;
+            margin: 17px 28px;
+            }
+            .col-6{
+                .text{
+                    font-family: 'Heebo', sans-serif;
+                    margin: 6px -15px;
+                    font-size: 20px;
+                    color: #6d2a98;
+                    position: absolute;
+                }
+            }
+        }
+        }
+        .vip-text{
+            p{
+                font-size: 25px;
+                color: white;
+                margin-left: 38px;
+                margin-top: 19px;
+                margin-bottom: 7px;
+                font-family: 'Heebo', sans-serif;
+                font-weight: 500;
+            }
+            .spantext{
+                color: white;
+                font-size: 14px;
+                margin-left: 36px;
+                line-height: 1.3;
+                font-family: 'Heebo', sans-serif;
+                font-weight: 400;
+            }
+        }
+        .vip-button{
+            button{
+                padding: 13px 33px;
+                font-size: 19px;
+                border-radius: 30px;
+                margin: 21px 23%;
+                color: #6d2a98;
+                font-weight: 500;
+                outline: none;
+            }:hover{
+                color: #06d064;
+                border: 2px solid #00d764;
+            }
+        }  
+    }
+    .sade-elan-et{
+       
+            border-radius: 8px;
+            width: 435px;
+            height: 299px;
+            background-repeat: no-repeat;
+            background-color: #def2fe;
+            -webkit-box-shadow: 0 1px 5px 0 #cbcaca;
+            box-shadow: 0 1px 5px 0 #cbcaca;
+          
+            background-size: 250px 240px;
+            background-position-y: 43px;
+            background-position-x: 270px;
+    
+            .number-of-visits-more{
+                width: 180px;
+                height: 90px;
+                margin-left: 22px;
+                background: #4a8ad7;
+               
+                .col-6 span.times{
+                    font-size: 19px;
+                font-weight: 500;
+                color: #3e3e3e;
+                position: absolute;
+                margin: 39px 28px;
+                }
+               
+                    .text{
+                        margin: 0px 15px;
+                        font-size: 18px;
+                        padding: 24px 0px;
+                        span{
+                            font-family: 'Heebo', sans-serif;
+                         
+                           color: white;
+                           
+                        }
+                       
+                    }
+                
+            }
+            }
+            .sade-text{
+                p{
+                    font-size: 25px;
+                    color: #3e3e3e;
+                    margin-left: 38px;
+                    margin-top: 19px;
+                    margin-bottom: 7px;
+                    font-family: 'Heebo', sans-serif;
+                    font-weight: 500;
+                }
+                .spantext{
+                    color: #3e3e3e;
+                    font-size: 14px;
+                    margin-left: 36px;
+                    line-height: 1.3;
+                    font-family: 'Heebo', sans-serif;
+                    font-weight: 400;
+                }
+            }
+            .sade-button{
+                button{
+                    padding: 13px 33px;
+                    font-size: 19px;
+                    border-radius: 30px;
+                    margin: 21px 23%;
+                    color: #4a87d3;
+                    -webkit-box-shadow: 0 2px 4px 0 #4a8ad7;
+                    box-shadow: 0 2px 4px 0 #4a8ad7;
+                    font-weight: 500;
+                    outline: none;
+                }:hover{
+                    color: #06d064;
+                    border: 2px solid #00d764;
+                }
+            } 
+            .rules-and-laws{
+                p{
+                  
+                   margin: 0 auto 22px;
+                    font-size: 14px;
+                    color: #4e4e4e;
+                    font-weight: 100;
+                    a{
+                        color: #22a7f0;
+                    }
+                }
+            } 
+        }
+
+    

@@ -1,0 +1,910 @@
+﻿ <!--Simple form search-->
+@model HomePageViewModel
+<section>
+    <div class="wrapper">
+        <div class="simple-form-search">
+            <div class="wideSearch-markas">
+                <select>
+                    <option>Butun markalar</option>
+                    <option>BMW</option>
+                    <option>BMW</option>
+                    <option>BMW</option>
+                    <option>BMW</option>
+                </select>
+                <select class="markas">
+                    <option>Butun modeller</option>
+                    <option>BMW</option>
+                    <option>BMW</option>
+                    <option>BMW</option>
+                    <option>BMW</option>
+                </select>
+            </div>
+            <div class="wideSearch-priceandYear">
+                <div class="optionalPrice">
+                    <label>Qiymeti</label>
+                    <select class="currency">
+                        <option>AZN <i class="fas fa-angle-down"></i></option>
+                        <option>USD</option>
+                        <option>EUR</option>
+                    </select>
+                    <input type="text" placeholder="min." class="optionalMin">
+                    <input type="text" placeholder="maks." class="optionalMax">
+                </div>
+                <div class="enterYear">
+                    <label class="year">Buraxilis ili</label>
+                    <input type="text" placeholder="min." class="optionalMin yearMin">
+                    <input type="text" placeholder="maks." class="optionalMax yearMax">
+                </div>
+            </div>
+            <div class="wideSearch-barterCredit">
+                <div class="checkBox">
+                    <label>Kredit <input type="checkbox"> </label>
+                    <select class="allCity">
+                        <option>Butun seherler</option>
+                        <option>Baki</option>
+                        <option>Baki</option>
+                        <option>Baki</option>
+                        <option>Baki</option>
+                    </select>
+                </div>
+                <div class="checkBox barter">
+                    <label>Barter <input type="checkbox"> </label>
+
+                    <div class="dailyAds"><p>31470 elan</p></div>
+                </div>
+                <div> </div>
+
+            </div>
+            <div class="wideSearch">
+                <button class="search">Axtar</button>
+                <a class="moreSearch">Ertrafli axtaris</a>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</section>
+<!--Vip elanlarTitle-->
+@if (Model.AdvertisementViewModels.Where(x => x.VIP).Count() != 0)
+{
+    <section>
+        <div class="wrapper">
+            <div class="vipAll vipAdvertise">
+                <p class="vipElanlar">VIP ELANLAR</p>
+                <a href="#">Butun VIP elanlar</a>
+                <b class="logoText">Bütün bank xidmətləri telefonunda</b>
+                <img src="https://newmedia.az/iqbal/9/4/sag/logo2.png">
+
+            </div>
+            <div class="clear"></div>
+        </div>
+    </section>
+}
+
+<!--Products-->
+<section>
+    @foreach (var item in Model.AdvertisementViewModels.Where(x => x.VIP))
+    {
+        
+  <a asp-controller="Advertisement" asp-action="Details" asp-route-id="@item.ID">
+     <div class="wrapper">
+        <div class="products">
+            <div class="productBorder">
+                <div class="onliCar">
+                    <i class="far fa-heart likeIcon"></i>
+                    <img src=@item.PhotoDirectory alt="">
+                    <div class="productPrice">
+                        @string.Format("{0:C}", item.Car.Price.ToString()) <span>AZN</span>
+                    </div>
+                    <div class="productsInfo">
+                        <p class="carName">@item.Car.Name</p>
+                        <div class="carInfo">
+                            <p class="year">
+                                @item.Car.Year.ToString()
+
+                                <span></span>
+                            </p>
+                            <p class="engin">
+                                @string.Format($"{item.Car.EngineCapacity} L")
+                                <span></span>
+                            </p>
+                            <p class="km">@string.Format($"{item.Car.Mileage}  KM") </p>
+                        </div>
+                        <div class="enterDay">@item.City.Name, @item.CreationDate <i class="fas fa-gem"></i></div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</a>
+    }
+
+</section>
+<!--Son elanlar-->
+@if (Model.AdvertisementViewModels.Where(x => !x.VIP).Count() > 0)
+{
+    <section>
+        <div class="wrapper">
+            <div class="vipAll vipAdvertise">
+                <p class="vipElanlar">SON ELANLAR</p>
+                <a class="allShow" href="#">Hamsini goster</a>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </section>
+}
+
+<!--Products-->
+<section>
+
+    @foreach (var item in Model.AdvertisementViewModels.Where(x => !x.VIP).OrderBy(x => x.CreationDate))
+    {
+        <a asp-controller="Advertisement" asp-action="Details" asp-route-id="@item.ID">
+            <div class="wrapper">
+                <div class="products">
+                    <div class="productBorder">
+                        <div class="onliCar">
+                            <i class="far fa-heart likeIcon"></i>
+                            <img src=@item.PhotoDirectory alt="">
+                            <div class="productPrice">
+                                @string.Format("{0:C}", item.Car.Price.ToString()) <span>AZN</span>
+                            </div>
+                            <div class="productsInfo">
+                                <p class="carName">@item.Car.Name</p>
+                                <div class="carInfo">
+                                    <p class="year">
+                                        @item.Car.Year.ToString()
+
+                                        <span></span>
+                                    </p>
+                                    <p class="engin">
+                                        @string.Format($"{item.Car.EngineCapacity} L")
+                                        <span></span>
+                                    </p>
+                                    <p class="km">@string.Format($"{item.Car.Mileage}  KM") </p>
+                                </div>
+                                <div class="enterDay">@item.City.Name, @item.CreationDate</div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </a>
+            }
+
+
+
+            <div class="clear"></div>
+
+    </section>
+<!--Avtosalonlar-->
+<section class="wrapper">
+    <div class="shops-header-Container">
+        <div class="shops-container">
+            <div class="shopsHeader">
+                <p>AVTOXƏBƏRLƏR</p>
+                <a href="#">Hamsini goster</a>
+            </div>
+            <div class="shops">
+                @foreach (var item in Model.News)
+                {
+                <a asp-controller="News" asp-action="Details" asp-route-id="@item.ID">
+                    <div class="salonlar-Logo-Container">
+                        <div class="salonlarLogo">
+
+                            <img src="@item.PhotoDirectory">
+
+                            <div class="salonlarName">
+                                <p>@item.Title.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </a>
+                    
+                }
+
+
+            </div>
+        </div>
+
+    </div>
+</section>
+<!--Sirketler-->
+<section class="wrapper">
+    <div class="shops-header-Container">
+        <div class="shops-container companies">
+            <div class="shopsHeader">
+                <p>MAGAZA VE SIRKETLER</p>
+                <a href="#">Hamsini goster</a>
+            </div>
+            <div class="shops">
+                <div class="salonlar-Logo-Container companiesLogo">
+                    <div class="salonlarLogo">
+
+                        <img src="https://turbo.azstatic.com/uploads/f352x352/2018%2F10%2F22%2F10%2F22%2F21%2F162d105e-3271-482d-9996-7a0bf6637623%2Flogo%20%282%29.jpg">
+                        <div class="salonlarName companiesName">
+                            <p>Pemza Group MMC </p>
+                            <span>Avto kimya və sürtkü... </span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="salonlar-Logo-Container companiesLogo">
+                    <div class="salonlarLogo">
+
+                        <img src="https://turbo.azstatic.com/uploads/f352x352/2018%2F11%2F28%2F10%2F46%2F37%2F41ba6ae1-e652-466f-b6de-b8621aa6ae77%2Flogo2.jpg">
+                        <div class="salonlarName companiesName">
+                            <p>Turbo Service </p>
+                            <span>Avtoservisler </span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="salonlar-Logo-Container companiesLogo">
+                    <div class="salonlarLogo">
+
+                        <img src="https://turbo.azstatic.com/uploads/f352x352/2018%2F09%2F24%2F09%2F58%2F04%2Fef2ac23e-ade1-42ed-9cc6-541d77c0e25b%2FMasla_Honda_OEM.jpg">
+                        <div class="salonlarName companiesName">
+                            <p>Hondo Avtomabil </p>
+                            <span>Avtoservisler </span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="salonlar-Logo-Container companiesLogo">
+                    <div class="salonlarLogo">
+
+                        <img src="https://turbo.azstatic.com/uploads/f352x352/2018%2F09%2F24%2F09%2F54%2F16%2F25d690d4-e0fb-4994-83ec-33547f467357%2Fsubarulogo33.jpg">
+                        <div class="salonlarName companiesName">
+                            <p>Subaru Avtomabil </p>
+                            <span>Avtoservisler </span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="salonlar-Logo-Container companiesLogo">
+                    <div class="salonlarLogo">
+
+                        <img src="https://turbo.azstatic.com/uploads/f352x352/2018%2F09%2F24%2F10%2F01%2F13%2Ff3bf03a7-203c-4375-abd7-7e6d10dfd9dc%2Ftoyotalogo.jpg">
+                        <div class="salonlarName companiesName">
+                            <p>Toyota Abseron </p>
+                            <span>Avtoservisler </span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="clear"></div>
+</section>
+<!--Butun markalar-->
+<section class="wrapper">
+    <div class="markalarHeader">
+        <p>AVTOSALONLAR</p>
+    </div>
+    <div class="allMarkasSection">
+
+
+        <div class="allMarkasContainer">
+            <div class="allMarkas">
+                <p>1</p>
+                <span></span>
+                <a href="#">BMW</a>
+            </div>
+            <div class="allMarkas">
+                <p>2</p>
+                <span></span>
+                <a href="#">Mercedes</a>
+            </div>
+            <div class="allMarkas">
+                <p>3</p>
+                <span></span>
+                <a href="#">Rang Rover</a>
+            </div>
+            <div class="allMarkas">
+                <p>4</p>
+                <span></span>
+                <a href="#">Toyota</a>
+            </div>
+            <div class="allMarkas">
+                <p>5</p>
+                <span></span>
+                <a href="#">Chovralet</a>
+            </div>
+            <div class="allMarkas">
+                <p>1</p>
+                <span></span>
+                <a href="#">BMW</a>
+            </div>
+            <div class="allMarkas">
+                <p>2</p>
+                <span></span>
+                <a href="#">Mercedes</a>
+            </div>
+            <div class="allMarkas">
+                <p>3</p>
+                <span></span>
+                <a href="#">Rang Rover</a>
+            </div>
+            <div class="allMarkas">
+                <p>4</p>
+                <span></span>
+                <a href="#">Toyota</a>
+            </div>
+            <div class="allMarkas">
+                <p>5</p>
+                <span></span>
+                <a href="#">Chovralet</a>
+            </div>
+            <div class="allMarkas">
+                <p>1</p>
+                <span></span>
+                <a href="#">BMW</a>
+            </div>
+            <div class="allMarkas">
+                <p>2</p>
+                <span></span>
+                <a href="#">Mercedes</a>
+            </div>
+            <div class="allMarkas">
+                <p>3</p>
+                <span></span>
+                <a href="#">Rang Rover</a>
+            </div>
+            <div class="allMarkas">
+                <p>4</p>
+                <span></span>
+                <a href="#">Toyota</a>
+            </div>
+            <div class="allMarkas">
+                <p>5</p>
+                <span></span>
+                <a href="#">Chovralet</a>
+            </div>
+            <div class="allMarkas">
+                <p>1</p>
+                <span></span>
+                <a href="#">BMW</a>
+            </div>
+            <div class="allMarkas">
+                <p>2</p>
+                <span></span>
+                <a href="#">Mercedes</a>
+            </div>
+            <div class="allMarkas">
+                <p>3</p>
+                <span></span>
+                <a href="#">Rang Rover</a>
+            </div>
+            <div class="allMarkas">
+                <p>4</p>
+                <span></span>
+                <a href="#">Toyota</a>
+            </div>
+            <div class="allMarkas">
+                <p>5</p>
+                <span></span>
+                <a href="#">Chovralet</a>
+            </div>
+            <div class="allMarkas">
+                <p>1</p>
+                <span></span>
+                <a href="#">BMW</a>
+            </div>
+            <div class="allMarkas">
+                <p>2</p>
+                <span></span>
+                <a href="#">Mercedes</a>
+            </div>
+            <div class="allMarkas">
+                <p>3</p>
+                <span></span>
+                <a href="#">Rang Rover</a>
+            </div>
+            <div class="allMarkas">
+                <p>4</p>
+                <span></span>
+                <a href="#">Toyota</a>
+            </div>
+            <div class="allMarkas">
+                <p>5</p>
+                <span></span>
+                <a href="#">Chovralet</a>
+            </div>
+            <div class="allMarkas">
+                <p>1</p>
+                <span></span>
+                <a href="#">BMW</a>
+            </div>
+            <div class="allMarkas">
+                <p>2</p>
+                <span></span>
+                <a href="#">Mercedes</a>
+            </div>
+            <div class="allMarkas">
+                <p>3</p>
+                <span></span>
+                <a href="#">Rang Rover</a>
+            </div>
+            <div class="allMarkas">
+                <p>4</p>
+                <span></span>
+                <a href="#">Toyota</a>
+            </div>
+            <div class="allMarkas">
+                <p>5</p>
+                <span></span>
+                <a href="#">Chovralet</a>
+            </div>
+
+
+        </div>
+        <div class="allMarkasContainer">
+            <div class="allMarkas">
+                <p>1</p>
+                <span></span>
+                <a href="#">BMW</a>
+            </div>
+            <div class="allMarkas">
+                <p>2</p>
+                <span></span>
+                <a href="#">Mercedes</a>
+            </div>
+            <div class="allMarkas">
+                <p>3</p>
+                <span></span>
+                <a href="#">Rang Rover</a>
+            </div>
+            <div class="allMarkas">
+                <p>4</p>
+                <span></span>
+                <a href="#">Toyota</a>
+            </div>
+            <div class="allMarkas">
+                <p>5</p>
+                <span></span>
+                <a href="#">Chovralet</a>
+            </div>
+            <div class="allMarkas">
+                <p>1</p>
+                <span></span>
+                <a href="#">BMW</a>
+            </div>
+            <div class="allMarkas">
+                <p>2</p>
+                <span></span>
+                <a href="#">Mercedes</a>
+            </div>
+            <div class="allMarkas">
+                <p>3</p>
+                <span></span>
+                <a href="#">Rang Rover</a>
+            </div>
+            <div class="allMarkas">
+                <p>4</p>
+                <span></span>
+                <a href="#">Toyota</a>
+            </div>
+            <div class="allMarkas">
+                <p>5</p>
+                <span></span>
+                <a href="#">Chovralet</a>
+            </div>
+            <div class="allMarkas">
+                <p>1</p>
+                <span></span>
+                <a href="#">BMW</a>
+            </div>
+            <div class="allMarkas">
+                <p>2</p>
+                <span></span>
+                <a href="#">Mercedes</a>
+            </div>
+            <div class="allMarkas">
+                <p>3</p>
+                <span></span>
+                <a href="#">Rang Rover</a>
+            </div>
+            <div class="allMarkas">
+                <p>4</p>
+                <span></span>
+                <a href="#">Toyota</a>
+            </div>
+            <div class="allMarkas">
+                <p>5</p>
+                <span></span>
+                <a href="#">Chovralet</a>
+            </div>
+            <div class="allMarkas">
+                <p>1</p>
+                <span></span>
+                <a href="#">BMW</a>
+            </div>
+            <div class="allMarkas">
+                <p>2</p>
+                <span></span>
+                <a href="#">Mercedes</a>
+            </div>
+            <div class="allMarkas">
+                <p>3</p>
+                <span></span>
+                <a href="#">Rang Rover</a>
+            </div>
+            <div class="allMarkas">
+                <p>4</p>
+                <span></span>
+                <a href="#">Toyota</a>
+            </div>
+            <div class="allMarkas">
+                <p>5</p>
+                <span></span>
+                <a href="#">Chovralet</a>
+            </div>
+            <div class="allMarkas">
+                <p>1</p>
+                <span></span>
+                <a href="#">BMW</a>
+            </div>
+            <div class="allMarkas">
+                <p>2</p>
+                <span></span>
+                <a href="#">Mercedes</a>
+            </div>
+            <div class="allMarkas">
+                <p>3</p>
+                <span></span>
+                <a href="#">Rang Rover</a>
+            </div>
+            <div class="allMarkas">
+                <p>4</p>
+                <span></span>
+                <a href="#">Toyota</a>
+            </div>
+            <div class="allMarkas">
+                <p>5</p>
+                <span></span>
+                <a href="#">Chovralet</a>
+            </div>
+            <div class="allMarkas">
+                <p>1</p>
+                <span></span>
+                <a href="#">BMW</a>
+            </div>
+            <div class="allMarkas">
+                <p>2</p>
+                <span></span>
+                <a href="#">Mercedes</a>
+            </div>
+            <div class="allMarkas">
+                <p>3</p>
+                <span></span>
+                <a href="#">Rang Rover</a>
+            </div>
+            <div class="allMarkas">
+                <p>4</p>
+                <span></span>
+                <a href="#">Toyota</a>
+            </div>
+            <div class="allMarkas">
+                <p>5</p>
+                <span></span>
+                <a href="#">Chovralet</a>
+            </div>
+
+
+        </div>
+        <div class="allMarkasContainer">
+            <div class="allMarkas">
+                <p>1</p>
+                <span></span>
+                <a href="#">BMW</a>
+            </div>
+            <div class="allMarkas">
+                <p>2</p>
+                <span></span>
+                <a href="#">Mercedes</a>
+            </div>
+            <div class="allMarkas">
+                <p>3</p>
+                <span></span>
+                <a href="#">Rang Rover</a>
+            </div>
+            <div class="allMarkas">
+                <p>4</p>
+                <span></span>
+                <a href="#">Toyota</a>
+            </div>
+            <div class="allMarkas">
+                <p>5</p>
+                <span></span>
+                <a href="#">Chovralet</a>
+            </div>
+            <div class="allMarkas">
+                <p>1</p>
+                <span></span>
+                <a href="#">BMW</a>
+            </div>
+            <div class="allMarkas">
+                <p>2</p>
+                <span></span>
+                <a href="#">Mercedes</a>
+            </div>
+            <div class="allMarkas">
+                <p>3</p>
+                <span></span>
+                <a href="#">Rang Rover</a>
+            </div>
+            <div class="allMarkas">
+                <p>4</p>
+                <span></span>
+                <a href="#">Toyota</a>
+            </div>
+            <div class="allMarkas">
+                <p>5</p>
+                <span></span>
+                <a href="#">Chovralet</a>
+            </div>
+            <div class="allMarkas">
+                <p>1</p>
+                <span></span>
+                <a href="#">BMW</a>
+            </div>
+            <div class="allMarkas">
+                <p>2</p>
+                <span></span>
+                <a href="#">Mercedes</a>
+            </div>
+            <div class="allMarkas">
+                <p>3</p>
+                <span></span>
+                <a href="#">Rang Rover</a>
+            </div>
+            <div class="allMarkas">
+                <p>4</p>
+                <span></span>
+                <a href="#">Toyota</a>
+            </div>
+            <div class="allMarkas">
+                <p>5</p>
+                <span></span>
+                <a href="#">Chovralet</a>
+            </div>
+            <div class="allMarkas">
+                <p>1</p>
+                <span></span>
+                <a href="#">BMW</a>
+            </div>
+            <div class="allMarkas">
+                <p>2</p>
+                <span></span>
+                <a href="#">Mercedes</a>
+            </div>
+            <div class="allMarkas">
+                <p>3</p>
+                <span></span>
+                <a href="#">Rang Rover</a>
+            </div>
+            <div class="allMarkas">
+                <p>4</p>
+                <span></span>
+                <a href="#">Toyota</a>
+            </div>
+            <div class="allMarkas">
+                <p>5</p>
+                <span></span>
+                <a href="#">Chovralet</a>
+            </div>
+            <div class="allMarkas">
+                <p>1</p>
+                <span></span>
+                <a href="#">BMW</a>
+            </div>
+            <div class="allMarkas">
+                <p>2</p>
+                <span></span>
+                <a href="#">Mercedes</a>
+            </div>
+            <div class="allMarkas">
+                <p>3</p>
+                <span></span>
+                <a href="#">Rang Rover</a>
+            </div>
+            <div class="allMarkas">
+                <p>4</p>
+                <span></span>
+                <a href="#">Toyota</a>
+            </div>
+            <div class="allMarkas">
+                <p>5</p>
+                <span></span>
+                <a href="#">Chovralet</a>
+            </div>
+            <div class="allMarkas">
+                <p>1</p>
+                <span></span>
+                <a href="#">BMW</a>
+            </div>
+            <div class="allMarkas">
+                <p>2</p>
+                <span></span>
+                <a href="#">Mercedes</a>
+            </div>
+            <div class="allMarkas">
+                <p>3</p>
+                <span></span>
+                <a href="#">Rang Rover</a>
+            </div>
+            <div class="allMarkas">
+                <p>4</p>
+                <span></span>
+                <a href="#">Toyota</a>
+            </div>
+            <div class="allMarkas">
+                <p>5</p>
+                <span></span>
+                <a href="#">Chovralet</a>
+            </div>
+
+
+        </div>
+        <div class="allMarkasContainer">
+            <div class="allMarkas">
+                <p>1</p>
+                <span></span>
+                <a href="#">BMW</a>
+            </div>
+            <div class="allMarkas">
+                <p>2</p>
+                <span></span>
+                <a href="#">Mercedes</a>
+            </div>
+            <div class="allMarkas">
+                <p>3</p>
+                <span></span>
+                <a href="#">Rang Rover</a>
+            </div>
+            <div class="allMarkas">
+                <p>4</p>
+                <span></span>
+                <a href="#">Toyota</a>
+            </div>
+            <div class="allMarkas">
+                <p>5</p>
+                <span></span>
+                <a href="#">Chovralet</a>
+            </div>
+            <div class="allMarkas">
+                <p>1</p>
+                <span></span>
+                <a href="#">BMW</a>
+            </div>
+            <div class="allMarkas">
+                <p>2</p>
+                <span></span>
+                <a href="#">Mercedes</a>
+            </div>
+            <div class="allMarkas">
+                <p>3</p>
+                <span></span>
+                <a href="#">Rang Rover</a>
+            </div>
+            <div class="allMarkas">
+                <p>4</p>
+                <span></span>
+                <a href="#">Toyota</a>
+            </div>
+            <div class="allMarkas">
+                <p>5</p>
+                <span></span>
+                <a href="#">Chovralet</a>
+            </div>
+            <div class="allMarkas">
+                <p>1</p>
+                <span></span>
+                <a href="#">BMW</a>
+            </div>
+            <div class="allMarkas">
+                <p>2</p>
+                <span></span>
+                <a href="#">Mercedes</a>
+            </div>
+            <div class="allMarkas">
+                <p>3</p>
+                <span></span>
+                <a href="#">Rang Rover</a>
+            </div>
+            <div class="allMarkas">
+                <p>4</p>
+                <span></span>
+                <a href="#">Toyota</a>
+            </div>
+            <div class="allMarkas">
+                <p>5</p>
+                <span></span>
+                <a href="#">Chovralet</a>
+            </div>
+            <div class="allMarkas">
+                <p>1</p>
+                <span></span>
+                <a href="#">BMW</a>
+            </div>
+            <div class="allMarkas">
+                <p>2</p>
+                <span></span>
+                <a href="#">Mercedes</a>
+            </div>
+            <div class="allMarkas">
+                <p>3</p>
+                <span></span>
+                <a href="#">Rang Rover</a>
+            </div>
+            <div class="allMarkas">
+                <p>4</p>
+                <span></span>
+                <a href="#">Toyota</a>
+            </div>
+            <div class="allMarkas">
+                <p>5</p>
+                <span></span>
+                <a href="#">Chovralet</a>
+            </div>
+            <div class="allMarkas">
+                <p>1</p>
+                <span></span>
+                <a href="#">BMW</a>
+            </div>
+            <div class="allMarkas">
+                <p>2</p>
+                <span></span>
+                <a href="#">Mercedes</a>
+            </div>
+            <div class="allMarkas">
+                <p>3</p>
+                <span></span>
+                <a href="#">Rang Rover</a>
+            </div>
+            <div class="allMarkas">
+                <p>4</p>
+                <span></span>
+                <a href="#">Toyota</a>
+            </div>
+            <div class="allMarkas">
+                <p>5</p>
+                <span></span>
+                <a href="#">Chovralet</a>
+            </div>
+            <div class="allMarkas">
+                <p>1</p>
+                <span></span>
+                <a href="#">BMW</a>
+            </div>
+            <div class="allMarkas">
+                <p>2</p>
+                <span></span>
+                <a href="#">Mercedes</a>
+            </div>
+            <div class="allMarkas">
+                <p>3</p>
+                <span></span>
+                <a href="#">Rang Rover</a>
+            </div>
+            <div class="allMarkas">
+                <p>4</p>
+                <span></span>
+                <a href="#">Toyota</a>
+            </div>
+
+
+
+        </div>
+
+    </div>
+    <div class="clear"></div>
+</section>

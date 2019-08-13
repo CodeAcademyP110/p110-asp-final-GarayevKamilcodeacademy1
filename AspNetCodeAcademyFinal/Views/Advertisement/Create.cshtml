@@ -1,0 +1,443 @@
+﻿
+@model AdvertisementModel
+<section>
+
+    <form asp-action="Create" method="post">
+       
+    <div class="wrapper">
+        <div class="first-number">
+
+        </div>
+        <div class="admin-warning">
+            <p>ELAN</p>
+            <ul>
+                <li>Üç ay ərzində bir nəqliyyat vasitəsi yalnız bir dəfə pulsuz dərc oluna bilər.</li>
+                <li>Üç ay ərzində təkrar və ya oxşar elanlar (marka/model, rəng) ödənişlidir.</li>
+                <li>Elanınızı saytın ön sıralarında görmək üçün "İrəli çək" xidmətindən istifadə edin.</li>
+            </ul>
+        </div>
+
+        <div class="car-type-add">       
+            <div class="left-side">
+                <div  class="car-type-choose">
+                    <label>
+                        Marka
+                        <abbr></abbr>
+                    </label>
+                    <div class="sellect-choose">
+                        <select asp-items="@(new SelectList(Model.Brands,"ID","Name"));" asp-for="@Model.AdvertisementViewModel.Car.Model.ID">
+                            <option>Birini Sec</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="car-type-choose">
+
+                    <label>
+                        Model
+                        <abbr></abbr>
+                    </label>
+                    <div class="sellect-choose">
+                        <select asp-items="@(new SelectList(Model.Models,"ID","Name")); " asp-for="@Model.AdvertisementViewModel.Car.Model.ID" >
+                            <option>Birini Sec</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="car-type-choose">
+
+                    <label>
+                        Ban novu
+                        <abbr></abbr>
+                    </label>
+                    <div class="sellect-choose">
+                        <select>
+                            <option>Secin</option>
+                            <option>Secin</option>
+                            <option>Secin</option>
+                            <option>Secin</option>
+                            <option>Secin</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="car-type-choose">
+
+                    <label>
+                        Yuruys km
+                        <abbr></abbr>
+                    </label>
+                    <div class="sellect-choose">
+                        <input asp-for="@Model.AdvertisementViewModel.Car.Mileage" step="10000" type="number">
+                    </div>
+                </div>
+                <div class="car-type-choose">
+
+                    <label>
+                        Reng
+                        <abbr></abbr>
+                    </label>
+                    <div class="sellect-choose">
+                        <select asp-items="@(new SelectList(Model.Colors,"ID","Name")); " asp-for="@Model.AdvertisementViewModel.Car.Color.ID">
+                            <option>Birini Sec</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="car-type-choose">
+
+                    <label>
+                        Qiymet
+                        <abbr></abbr>
+                    </label>
+                    <div class="sellect-choose">
+                        <input asp-for="@Model.AdvertisementViewModel.Car.Price" class="price" step="500" type="number">
+                        <span class="valyuta-azn">
+                            <label>AZN</label>
+                            <input class="valyuta" type="radio">
+                        </span>
+                        <span class="valyuta-usd">
+                            <label>USD</label>
+                            <input class="valyuta" type="radio">
+                        </span>
+                        <span class="valyuta-eur">
+                            <label>EUR</label>
+                            <input class="valyuta" type="radio">
+                        </span>
+
+
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+            <div class="right-side">
+                <div class="car-type-choose">
+
+                    <label>
+                        Yanacaq novu
+                        <abbr></abbr>
+                    </label>
+                    <div class="sellect-choose">
+                        <select asp-for="@Model.AdvertisementViewModel.Car.FuelType">
+                            <option>benzin</option>
+                            <option>dizel</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="car-type-choose">
+
+                    <label>
+                        Oturucu
+                        <abbr></abbr>
+                    </label>
+                    <div class="sellect-choose">
+                        <select>
+                            <option>tam</option>
+                            <option>arxa</option>
+                            <option>on</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="car-type-choose">
+
+                    <label>
+                        Suret qutusu
+                        <abbr></abbr>
+                    </label>
+                    <div class="sellect-choose">
+                        <select asp-for="@Model.AdvertisementViewModel.Car.Transmission">
+                            <option>avtomat</option>
+                            <option>mexanik</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="car-type-choose">
+
+                    <label>
+                        Buraxilis ili
+                        <abbr></abbr>
+                    </label>
+                    <div class="sellect-choose">
+                        <select asp-for="@Model.AdvertisementViewModel.Car.Year">
+                            <option>2000</option>
+                            <option>2001</option>
+                            <option>2002</option>
+                            <option>2003</option>
+                            <option>2004</option>
+                            <option>2005</option>
+                            <option>2006</option>
+                            <option>2007</option>
+                            <option>2008</option>
+                            <option>2009</option>
+                            <option>2010</option>
+                            <option>2011</option>
+                            <option>2012</option>
+                            <option>2013</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="car-type-choose">
+
+                    <label>
+                        Muherrikin hecmi, sm3
+                        <abbr></abbr>
+                    </label>
+                    <div class="sellect-choose">
+                        <select asp-for="@Model.AdvertisementViewModel.Car.EngineCapacity">
+                            <option>1800</option>
+                            <option>2700</option>
+                            <option>2500</option>
+                            <option>1500</option>
+                            <option>1200</option>
+                            <option>3500</option>
+                            <option>5500</option>
+                            <option>6500</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="car-type-choose">
+
+                    <label>
+                        Muherrikin gucu, a.g.
+                        <abbr></abbr>
+                    </label>
+                    <div class="sellect-choose">
+                        <input step="1" type="number">
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+        <div class="credit-barter-text-section">
+            <div class="more-information">
+                <p><input asp-for="@Model.AdvertisementViewModel.Car.About" />Elave melumat</p>
+            </div>
+
+            <div class="credit-addMoreInformation">
+                <input type="checkbox">
+                <label class="credit">Kreditdedir</label>
+                <input type="checkbox">
+                <label class="barter">Barter mumkundur</label>
+                <textarea name="text" cols="30" rows="10"></textarea>
+                <p>telefon nömrələri qeyd etmək qadağandır</p>
+            </div>
+        </div>
+        <div class="Vehicle-supply">
+            <p>Avtomabilin tecizati</p>
+            <div class="chekboxs">
+                <div class="col-3">
+                    <span>
+                        <input type="checkbox">
+                        <label>Yüngül lehimli disklər</label>
+                    </span>
+                    <span>
+                        <input type="checkbox">
+                        <label>Mərkəzi qapanma</label>
+                    </span>
+                    <span>
+                        <input type="checkbox">
+                        <label>Dəri salon</label>
+                    </span>
+                    <span>
+                        <input type="checkbox">
+                        <label>Oturacaqların ventilyasiyası</label>
+                    </span>
+                </div>
+                <div class="col-3">
+                    <span>
+                        <input type="checkbox">
+                        <label>ABS</label>
+                    </span>
+                    <span>
+                        <input type="checkbox">
+                        <label>Park radarı</label>
+                    </span>
+                    <span>
+                        <input type="checkbox">
+                        <label>Ksenon lampalar</label>
+                    </span>
+                </div>
+                <div class="col-3">
+                    <span>
+                        <input type="checkbox">
+                        <label>Lyuk</label>
+                    </span>
+                    <span>
+                        <input type="checkbox">
+                        <label>Kondisioner</label>
+                    </span>
+                    <span>
+                        <input type="checkbox">
+                        <label>Arxa görüntü kamerası</label>
+                    </span>
+                </div>
+                <div class="col-3">
+                    <span>
+                        <input type="checkbox">
+                        <label>Yağış sensoru</label>
+                    </span>
+                    <span>
+                        <input type="checkbox">
+                        <label>Oturacaqların isidilməsi</label>
+                    </span>
+                    <span>
+                        <input type="checkbox">
+                        <label>Yan pərdələr</label>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="add-image">
+            <p>Sekiller</p>
+            <div class="col-12">
+                <div class="image-text">
+                    <ul>
+                        <li>- Minimum – 3 şəkil (ön, arxa və bütöv ön panelin görüntüsü mütləqdir).</li>
+                        <li>- Maksimum – 21 şəkil.</li>
+                        <li>- Optimal ölçü – 1024x768 piksel.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-6">
+                <ul>
+                    <li>
+                        Şəkillər Azərbaycan Respublikasının ərazisində çəkilməlidir.
+                    </li>
+                    <li>Şəkillər yaxşı keyfiyyətdə olmalıdır. Nəqliyyat vasitəsi yaxşı işıqlandırılmış olmalı, şəkillərin üzərində loqotip və digər yazılar olmamalıdır. Skrinşotlar qəbul olunmur.</li>
+                </ul>
+            </div>
+            <div class="col-6">
+                <ul>
+                    <li>
+                        Avtosalonda çəkilmiş şəkillər qeydiyyatdan keçmiş avtosalonun hesabından уerləşdirilməlidir.
+                    </li>
+                    <li>Şəxsi sahibi tərəfindən satılan nəqliyyat vasitəsinin şəkli avtosalon/rəsmi servis ərazisində və ya yaxınlığında çəkilməməlidir.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="enter-contact-number">
+            <p>
+                Elaqe
+                <span>
+                    Elan dərc olunduqdan sonra əlaqə məlumatları ilə bağlı heç bir dəyişiklik həyata keçirilmir.
+                </span>
+            </p>
+            <div class="about-yourself">
+
+                <label>
+                    Adiniz
+                    <abbr></abbr>
+                </label>
+                <div class="Name-choose">
+                    <input type="text">
+                </div>
+            </div>
+            <div class="about-yourself">
+
+                <label>
+                    Seher
+                    <abbr></abbr>
+                </label>
+                <div class="Name-choose">
+                    <select asp-items="@(new SelectList(Model.Cities,"ID","Name"));" asp-for="@Model.AdvertisementViewModel.City.ID">
+                        <option>Birini Sec</option>
+                    </select>
+                </div>
+            </div>
+            <div class="about-yourself">
+
+                <label>
+                    Email
+                    <abbr></abbr>
+                </label>
+                <div class="Name-choose">
+                    <input type="text">
+
+                </div>
+                <span class="email-secrutiy">
+                    saytda göstərilmir
+                </span>
+
+            </div>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+    <div class="thick-line"></div>
+    <div class="wrapper">
+        <div class="advertisement-type">
+            <p>Elanin novunu secin:</p>
+            <div class="vip-and-sinple">
+                <div class="col-6">
+                    <div class="vip-elan-et">
+                        <div class="number-of-visits-more">
+                            <div class="col-6">
+                                <span class="ten">10</span>
+                                </br>
+                                <span class="times">defe</span>
+                            </div>
+                            <div class="col-6">
+                                <span class="text">
+                                    daha cox
+                                    </br>
+                                    baxis sayi
+                                </span>
+                            </div>
+                        </div>
+                        <div class="vip-text">
+                            <p>VIP elan</p>
+                            <div class="spantext">
+                                <span>Sizin elanınız saytın ən populyar</br> mövqelərində nümayiş olunur və</br> maksimal sayda alıcı cəlb edir!</span>
+                            </div>
+
+                        </div>
+                        
+                        <div class="vip-button">
+                            <button asp-action="CreateVIP" id="btnVip"  type="submit"> 
+                                   15 AZN-e yerlesdir                            
+                            </button>
+                        </div>
+                    
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="sade-elan-et">
+                        <div class="number-of-visits-more">
+
+                            <div class="text">
+                                <span>
+                                    Turbo.az-da elan yerləşdirmək pulsuzdur!
+                                </span>
+                            </div>
+                        </div>
+                        <div class="sade-text">
+                            <p>Sade elan</p>
+                            <div class="spantext">
+                                <span>Siz Turbo.az-da elanınızı pulsuz yerləşdirə bilərsiniz, lakin ödənişli xidmətlərdən istifadə etsəniz, avtomobilinizi daha</br> tez satacaqsınız.</span>
+                            </div>
+
+                        </div>
+                        <div class="sade-button">
+
+                            <button type="submit">Pulsuz yerlesdir                            
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="rules-and-laws">
+                <p>
+                    Elan yerləşdirərək, siz Turbo.az-ın <a href="#"> İstifadəçi razılaşması</a> və <a href="#">Qaydaları</a> ilə razı olduğunuzu təsdiq edirsiniz.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    </form>
+</section>

@@ -1,0 +1,21 @@
+﻿@model  AdvertisementViewModel
+
+    <div>
+        <textbox style="display:block">@Model.Car.Model.Brand.Name   @Model.Car.Model.Name</textbox>
+        <textbox style="display:block">@Model.Car.Mileage</textbox>
+        <textbox style="display:block">@Model.Car.FuelType</textbox>
+        <textbox style="display:block">@Model.Car.About</textbox>
+        <textbox style="display:block">@Model.Car.Price</textbox>
+        <textbox style="display:block">@Model.Car.Transmission</textbox>
+        <textbox style="display:block">@Model.Car.Year</textbox>
+     @foreach (var item in Model.Car.Photos)
+     {
+         <div>
+             @item.Directory
+         </div>
+     }
+        <textbox style="display:block">@Model.City.Name</textbox>
+        <textbox style="display:block">@Model.CreationDate</textbox>
+        <textbox style="display:block">@Model.RefreshDate</textbox>
+
+    </div>
